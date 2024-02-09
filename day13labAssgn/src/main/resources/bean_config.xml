@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<!-- dependent bean config -->
+	<bean id="my_atm" class="dependent.ATMImpl" init-method="myInit"
+		destroy-method="myDestroy" scope="prototype"  >
+		<!-- Constructor based D.I -->
+		<constructor-arg name="cash12" value="4576.45" />
+	<property name="myService" ref = "email"/>
+	<property name="myTransport"  ref="http"/>
+	
+	</bean>
+	<!-- configure dependency bean -->
+	<bean id="test" class="dependency.TestTransport" />
+	<bean id="http" class="dependency.HttpTransport" />
+	<bean id="soap" class="dependency.SoapTransport" />
+    <bean id="email" class = "dependency.EmailBasedNotification" scope="prototype"/>
+    <bean id="sms" class = "dependency.SmsBasedService" scope="prototype"/>
+    
+</beans>

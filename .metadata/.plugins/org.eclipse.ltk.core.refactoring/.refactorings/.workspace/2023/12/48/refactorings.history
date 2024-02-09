@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;spring_boot_template_mvc&apos; to &apos;Day15Assgn&apos;" description="Rename resource &apos;spring_boot_template_mvc&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/spring_boot_template_mvc" name="Day15Assgn" stamp="1701445697727" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;spring_boot_template_mvc&apos; to &apos;MyProjectIPL&apos;" description="Rename resource &apos;spring_boot_template_mvc&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/spring_boot_template_mvc" name="MyProjectIPL" stamp="1701445875036" updateReferences="true"/>
+</session>
