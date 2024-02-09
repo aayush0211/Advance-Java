@@ -1,0 +1,37 @@
+
+sql
+
+create database : studentadmission;
+-- Create Students table
+CREATE TABLE students (
+    sid INT AUTO_INCREMENT PRIMARY KEY,
+    first_name VARCHAR(20),
+    last_name VARCHAR(20),
+    test_score DOUBLE
+);
+
+-- Create Courses table
+CREATE TABLE courses (
+    cid INT AUTO_INCREMENT PRIMARY KEY,
+    course_name VARCHAR(20)
+);
+
+-- Create StudentCourse junction table
+CREATE TABLE studentcourse (
+    sid INT,
+    cid INT,
+    PRIMARY KEY (sid, cid),
+    FOREIGN KEY (sid) REFERENCES students(sid),
+    FOREIGN KEY (cid) REFERENCES courses(cid)
+);
+
+insert into courses values(default,"DAC");
+insert into courses values(default,"DBDA");
+insert into courses values(default,"DITISS");
+insert into courses values(default,"AI");
+insert into courses values(default,"IOT");
+
+dburl = jdbc:mysql://localhost:3306/studentadmission?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true
+// make change when write in .xml &=> &amp;
+user= root
+password= root
